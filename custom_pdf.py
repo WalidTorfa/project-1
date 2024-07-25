@@ -1,9 +1,5 @@
 from fpdf import FPDF
 
-
-"""
-This is a styling file
-"""
 class PDF(FPDF):
     def header(self):
         self.set_font('Arial', 'B', 12)
@@ -11,8 +7,8 @@ class PDF(FPDF):
         self.ln(5)
 
     def chapter_title(self, title):
-        self.set_font('Arial', 'B', 12)
-        self.cell(0, 10, title, 0, 1)
+        self.set_font('Arial', 'B', 14)  # Larger font for the main title
+        self.cell(0, 10, title, 0, 1, 'L')
         self.ln(5)
 
     def chapter_body(self, body):
